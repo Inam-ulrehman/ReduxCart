@@ -32,7 +32,7 @@ const Cart = () => {
   // decrease
 
   const handleDecrease = (id, amount) => {
-    if (amount < 0) {
+    if (amount <= 1) {
       return dispatch(removeSingleItem(id))
     }
     return dispatch(decreaseAmount(id, amount))
